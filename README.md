@@ -1,4 +1,4 @@
-![Build Status]( https://travis-ci.com/jenny-wang8/shipping-service.svg?branch=master)
+[![Build Status]( https://travis-ci.com/jenny-wang8/shipping-service.svg?branch=master)](https:// travis-ci.com/jenny-wang8/shipping-service)
 
 # Shipping Service
 
