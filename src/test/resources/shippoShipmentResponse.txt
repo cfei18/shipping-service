@@ -1,0 +1,96 @@
+{
+   "object_created":"2014-07-17T00:04:06.163Z",
+   "object_updated":"2014-07-17T00:04:06.163Z",
+   "object_id":"89436997a794439ab47999701e60392e",
+   "object_owner":"shippotle@goshippo.com",
+   "status":"SUCCESS",
+   "address_from":{
+      "object_id": "fdabf0abb93c4460b60aa596116872a7",
+      "validation_results": {},
+      "is_complete": true,
+      "name": "Mrs Hippo",
+      "street1": "1092 Indian Summer Ct",
+      "city": "San Jose",
+      "state": "CA",
+      "zip": "95122",
+      "country": "US",
+      "phone": "4159876543",
+      "email": "mrshippo@goshippo.com"
+   },
+   "address_to":{
+      "object_id": "0476d70c612a423f9509ba5f807569db",
+      "is_complete": true,
+      "validation_results": {},
+      "name": "Mr Hippo",
+      "street1": "965 Mission St #572",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94103",
+      "country": "US",
+      "phone": "4151234567",
+      "email": "mrhippo@goshippo.com"
+   },
+  "address_return":{
+      "object_id": "fdabf0abb93c4460b60aa596116872a7",
+      "is_complete": true,
+      "validation_results": {},
+      "name": "Mrs Hippo",
+      "street1": "1092 Indian Summer Ct",
+      "city": "San Jose",
+      "state": "CA",
+      "zip": "95122",
+      "country": "US",
+      "phone": "4159876543",
+      "email": "mrshippo@goshippo.com"
+   },
+  "parcels":[{
+      "object_id": "7df2ecf8b4224763ab7c71fae7ec8274",
+      "length": "10",
+      "width": "15",
+      "height": "10",
+      "distance_unit": "in",
+      "weight": "1",
+      "mass_unit": "lb"
+   }],
+   "shipment_date":"2013-12-03T12:00:00Z",
+   "extra":{
+      "insurance": {
+        "amount": "",
+        "currency": ""
+      },
+      "reference_1":"",
+      "reference_2":""
+   },
+   "customs_declaration":null,
+   "rates": [
+        {
+            "object_created": "2014-07-17T00:04:06.263Z",
+            "object_id": "545ab0a1a6ea4c9f9adb2512a57d6d8b",
+            "object_owner": "shippotle@goshippo.com",
+            "shipment": "89436997a794439ab47999701e60392e",
+            "attributes": [],
+            "amount": "5.50",
+            "currency": "USD",
+            "amount_local": "5.50",
+            "currency_local": "USD",
+            "provider": "USPS",
+            "provider_image_75": "https://cdn2.goshippo.com/providers/75/USPS.png",
+            "provider_image_200": "https://cdn2.goshippo.com/providers/200/USPS.png",
+            "servicelevel": {
+              "name": "Priority Mail",
+              "token":"usps_priority",
+              "terms": ""
+            },
+            "estimated_days": 2,
+            "arrives_by": null,
+            "duration_terms": "Delivery in 1 to 3 business days.",
+            "messages": [],
+            "carrier_account": "078870331023437cb917f5187429b093",
+            "test": true
+        }
+    ],
+   "carrier_accounts": [],
+   "messages":[],
+   "metadata":"Customer ID 123456",
+   "test": true
+}

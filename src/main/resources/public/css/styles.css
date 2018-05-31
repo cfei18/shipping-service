@@ -1,0 +1,10 @@
+.requestClass {
+	border-collapse: separate;
+	border-spacing: 15px 15px 15px 15px;
+}
+.requestClass td {
+    padding: 10px;
+}
+.requestClass input {
+	padding: 3px;
+}

@@ -1,0 +1,71 @@
+<div ng-controller="ratesCtrl">
+	<h1>Shipping Rate Calculator</h1>
+	<form role="form">
+		<table class="table">
+        	<tr><th colspan="2">Locations</th></tr>
+        	<tr><th>Origin</th><th>Destination</th></td>
+	        <tr><td>
+	        <!-- Origin -->
+	        	<table class="requestClass">
+	        		<tr><td>Name</td><td><input type="text" ng-model="request.origin.name"></td></tr>
+	        		<tr><td>Company</td><td><input type="text" ng-model="request.origin.company"></td></tr>
+	        		<tr><td>Street Line 1</td><td><input type="text" ng-model="request.origin.street1"></td></tr>
+	        		<tr><td>Street Line 2</td><td><input type="text" ng-model="request.origin.street2"></td></tr>
+	        		<tr><td>City</td><td><input type="text" ng-model="request.origin.city"></td></tr>
+	        		<tr><td>State</td><td><input type="text" ng-model="request.origin.region"></td></tr>
+	        		<tr><td>Zip Code</td><td><input type="text" ng-model="request.origin.postalCode"></td></tr>
+	        		<tr><td>Country</td><td><input type="text" ng-model="request.origin.country"></td></tr>
+	        		<tr><td>Phone</td><td><input type="text" ng-model="request.origin.phone"></td></tr>
+	        	</table>
+	        </td><td>
+	        <!-- Destination -->
+	        	<table class="requestClass">
+	        		<tr><td>Name</td><td><input type="text" ng-model="request.destination.name"></td></tr>
+	        		<tr><td>Company</td><td><input type="text" ng-model="request.destination.company"></td></tr>
+	        		<tr><td>Street Line 1</td><td><input type="text" ng-model="request.destination.street1"></td></tr>
+	        		<tr><td>Street Line 2</td><td><input type="text" ng-model="request.destination.street2"></td></tr>
+	        		<tr><td>City</td><td><input type="text" ng-model="request.destination.city"></td></tr>
+	        		<tr><td>State</td><td><input type="text" ng-model="request.destination.region"></td></tr>
+	        		<tr><td>Zip Code</td><td><input type="text" ng-model="request.destination.postalCode"></td></tr>
+	        		<tr><td>Country</td><td><input type="text" ng-model="request.destination.country"></td></tr>
+	        		<tr><td>Phone</td><td><input type="text" ng-model="request.destination.phone"></td></tr>
+	        	</table>
+	        </td></tr>
+	        <tr><th colspan="2">Package Details</th></tr>
+	        <tr><td colspan="2">
+	        <!-- Package -->
+	        	<table class="requestClass">
+	        		<tr><td>Weight (in ounces)</td><td><input type="text" ng-model="request.parcel.weight"></td></tr>
+	        	</table>
+	        </td></tr>
+	        <tr><td colspan="2"><button ng-click="submit(request)">Find Rates</button></td></tr>
+		</table>
+	</form>
+	<div class="rateTable" ng-if="retrievedData">
+		<h2>Shipping Rates</h2>
+		<form>
+			<div class="form-group">
+				<div class="input-group">
+					<div class="input-group-addon"><i class="fa fa-search"></i></div>
+					<input type="text" class="form-control" placeholder="Search Rates" ng-model="searchRate">
+				</div>
+			</div>
+		</form>
+		<table class="table table-bordered table-striped">
+			<tr>
+				<th>Carrier</th>
+				<th>Service Level</th>
+				<th>Rate</th>
+				<th>Estimated Days</th>
+			</tr>
+			<tbody>
+				<tr ng-repeat="rate in rateList | filter:searchRate">
+					<td>{{rate.carrier}}</td>
+					<td>{{rate.serviceLevel}}</td>
+					<td>{{rate.rate}} {{rate.currency}}</td>
+					<td>{{rate.estimatedDays}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
