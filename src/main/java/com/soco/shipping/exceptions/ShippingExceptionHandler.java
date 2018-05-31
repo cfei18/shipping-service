@@ -19,10 +19,8 @@ public class ShippingExceptionHandler implements ExceptionHandler<ShippingExcept
       response.status(exception.httpStatus());
       ErrorMessage message = new ErrorMessage(exception.errorCode(), exception.displayMessage());
       
-      logger.error(message.toString(), exception);
       response.body(JsonUtil.serialize(message));
     } catch (Exception e) {
-      logger.error("", e);
       logger.error(String.format(
           "Error in trying to handle exception that had error code %s and message %s", 
           exception.errorCode(), exception.displayMessage()), exception);
