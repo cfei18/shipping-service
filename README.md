@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/jenny-wang8/shipping-service.svg?branch=master)](https://travis-ci.com/jenny-wang8/shipping-service)
+
 # Shipping Service
 
 Do you have a stack of packages you've been meaning to send?
